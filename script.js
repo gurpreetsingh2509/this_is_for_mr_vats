@@ -6,8 +6,8 @@ function nextPage(page) {
 async function sendAlert() {
 
   // 🔐 PASTE your NEW Telegram Bot Token and Chat ID here
-  const BOT_TOKEN = "PASTE_NEW_BOT_TOKEN_HERE";
-  const CHAT_ID = "PASTE_CHAT_ID_HERE";
+  const BOT_TOKEN = "8459597820:AAEBLna6gmz33a0lAsA_BI-s-n8mprgZaxk";
+  const CHAT_ID = "5078398365";
 
   const message = "💖 Kunal clicked 'Order Gulab Jamun' on your Valentine website! Time to send real surprise 🍯❤️";
 
