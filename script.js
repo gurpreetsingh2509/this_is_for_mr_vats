@@ -6,7 +6,7 @@ function sendAlert() {
   const message = "💖 Kunal clicked 'Order Gulab Jamun'! Send real surprise now 🍯❤️";
 
   const url =
-    `https://api.telegram.org/bot${BOT_TOKEN}/sendMessage?chat_id=${CHAT_ID}&text=${encodeURIComponent(message)}`;
+    `https://api.telegram.org/bot${8459597820:AAEBLna6gmz33a0lAsA_BI-s-n8mprgZaxk}/sendMessage?chat_id=${5078398365}&text=${encodeURIComponent(message)}`;
 
   // Open Telegram API URL silently
   fetch(url)
