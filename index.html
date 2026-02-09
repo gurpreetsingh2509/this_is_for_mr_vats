@@ -3,50 +3,38 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Happy Valentine's Day ❤️</title>
+  <title>For Kunal ❤️</title>
 
   <style>
     body {
       margin: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background: linear-gradient(135deg, #ff9a9e, #fad0c4);
-      display: flex;
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    .page {
+      display: none;
+      min-height: 100vh;
       align-items: center;
       justify-content: center;
-      height: 100vh;
-      color: #fff;
+      flex-direction: column;
       text-align: center;
-      overflow: hidden;
+      padding: 40px 20px;
     }
 
-    .card {
-      background: rgba(255, 255, 255, 0.15);
-      backdrop-filter: blur(12px);
-      padding: 40px;
-      border-radius: 20px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-      max-width: 500px;
-      animation: fadeIn 2s ease-in-out;
+    .active {
+      display: flex;
+      animation: fadeIn 1.2s ease;
     }
 
-    h1 {
-      font-size: 2.5rem;
-      margin-bottom: 10px;
-    }
-
-    p {
-      font-size: 1.2rem;
-      line-height: 1.6;
-    }
-
-    .heart {
-      font-size: 3rem;
-      animation: pulse 1.5s infinite;
-    }
+    h1 { font-size: 2.4rem; margin-bottom: 12px; }
+    p { font-size: 1.15rem; max-width: 650px; line-height: 1.6; }
 
     button {
-      margin-top: 20px;
-      padding: 12px 24px;
+      margin-top: 25px;
+      padding: 12px 26px;
       border: none;
       border-radius: 25px;
       font-size: 1rem;
@@ -61,10 +49,10 @@
       background: #ff1e4d;
     }
 
-    @keyframes pulse {
-      0% { transform: scale(1); }
-      50% { transform: scale(1.2); }
-      100% { transform: scale(1); }
+    .gif {
+      width: 220px;
+      margin: 20px 0;
+      border-radius: 18px;
     }
 
     @keyframes fadeIn {
@@ -75,29 +63,88 @@
 </head>
 <body>
 
-  <div class="card">
-    <div class="heart">❤️</div>
-    <h1>Happy Valentine's Day</h1>
-    <p id="message">
-      From the moment you came into my life, everything became brighter, softer, and more meaningful. 💖
-      <br /><br />
-      No matter the distance between us, my heart always finds its way to you.
-    </p>
+<!-- PAGE 1 -->
+<section class="page active" id="page1">
+  <h1>Happy Valentine’s Day Kunal ❤️</h1>
+  <p>
+    From the day you came into my life, everything became softer,
+    warmer, and more meaningful.  
+    <br><br>
+    You are not just special…  
+    <b>you are my safest place in this world.</b>
+  </p>
+  <button onclick="nextPage(2)">Start Your Surprise ✨</button>
+</section>
 
-    <button onclick="showMoreLove()">Click for a Surprise ✨</button>
-  </div>
+<!-- PAGE 2 -->
+<section class="page" id="page2">
+  <h1>Funny Shayari Just for You 😄</h1>
+  <p>
+    Tere pyaar mein itna pagal ho gaya hoon… 💕<br>
+    Gulab jamun bhi dekhu toh tera hi khayal aa jata hai! 🍯<br><br>
 
-  <script>
-    function showMoreLove() {
-      const msg = document.getElementById('message');
-      msg.innerHTML = `
-        You are my safe place, my happiness, and my favorite person in the whole world. 💞<br /><br />
-        I love you more with every heartbeat… and I can't wait for all the beautiful moments we will create together. 🌹
-        <br /><br />
-        <strong>Forever yours. ❤️</strong>
-      `;
-    }
-  </script>
+    Tu saath ho toh life mast lagti hai… 😌<br>
+    Warna WiFi bhi connected ho kar slow lagti hai! 📶😂
+  </p>
+  <img class="gif" src="https://media.giphy.com/media/MDJ9IbxxvDUQM/giphy.gif" />
+  <button onclick="nextPage(3)">Next Surprise 🎁</button>
+</section>
+
+<!-- PAGE 3 -->
+<section class="page" id="page3">
+  <h1>You Mean So Much to Me 💖</h1>
+  <p>
+    You care for me in ways words cannot explain.  
+    A simple <b>thank you</b> is never enough for everything you do.  
+    <br><br>
+    You are my happiness, my peace, my comfort…  
+    and my favorite person forever. 🌍❤️
+  </p>
+  <img class="gif" src="https://media.giphy.com/media/l0MYt5jPR6QX5pnqM/giphy.gif" />
+  <button onclick="nextPage(4)">One More Thing… 💌</button>
+</section>
+
+<!-- PAGE 4 -->
+<section class="page" id="page4">
+  <h1>Secret Valentine Order 🍰</h1>
+  <p>
+    Click below to order your favorite <b>Gulab Jamun</b>…  
+    <br><br>
+    But the truth is —  
+    <b>I have already planned a real surprise for you. ❤️</b>
+  </p>
+
+  <!-- This button will trigger Telegram alert from script.js -->
+  <button onclick="sendAlert()">Order Gulab Jamun 😋</button>
+</section>
+
+<!-- PAGE 5 -->
+<section class="page" id="page5">
+  <h1>Surprise!!! 🎉</h1>
+  <p>
+    Your order has been secretly placed…  
+    not just for sweets,  
+    but for a lifetime of love, laughter, and endless hugs together. 🤗  
+    <br><br>
+    <b>I love you so much, Kunal. ❤️</b>
+  </p>
+  <img class="gif" src="https://media.giphy.com/media/26FLdmIp6wJr91JAI/giphy.gif" />
+</section>
+
+<script>
+  function nextPage(page) {
+    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+    document.getElementById('page' + page).classList.add('active');
+  }
+
+  function sendAlert() {
+    // This function will be connected in script.js for Telegram alert
+    nextPage(5);
+    setTimeout(() => {
+      alert("📦 Secret Valentine surprise is on the way for Kunal! ❤️");
+    }, 600);
+  }
+</script>
 
 </body>
 </html>
